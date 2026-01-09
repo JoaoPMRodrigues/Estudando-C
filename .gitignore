@@ -2,6 +2,7 @@
 *.exe
 *.out
 a.out
+main
 
 # Arquivos de compilação
 *.o
@@ -12,3 +13,4 @@ a.out
 
 # VS Code
 .vscode/
+
