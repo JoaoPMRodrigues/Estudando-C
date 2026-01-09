@@ -1,0 +1,14 @@
+# Executáveis gerados pelo C
+*.exe
+*.out
+a.out
+
+# Arquivos de compilação
+*.o
+
+# Arquivos temporários
+*~
+*.swp
+
+# VS Code
+.vscode/
