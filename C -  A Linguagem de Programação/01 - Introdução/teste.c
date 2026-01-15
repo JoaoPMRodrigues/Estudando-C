@@ -1,7 +1,0 @@
-#include <stdio.h>
-
-int main()
-{
-    printf("primeiro programa\n");
-    return 0;
-}
