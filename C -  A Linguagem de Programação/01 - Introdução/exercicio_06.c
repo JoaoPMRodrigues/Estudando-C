@@ -1,6 +1,6 @@
 #include <stdio.h>
 /* Cria uma tabela que compara graus celcius com Farenheit
-    para C = 0,20,40...*/
+    para C = 0,20,40...*/ 
 int main ()
 {
     int inicio, fim, incr;

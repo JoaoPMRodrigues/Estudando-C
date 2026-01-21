@@ -1,7 +1,7 @@
 # include <stdio.h>
 
 int main() 
-{
+{ 
     float i,j;
     i=1.0;
     j=10.0;
