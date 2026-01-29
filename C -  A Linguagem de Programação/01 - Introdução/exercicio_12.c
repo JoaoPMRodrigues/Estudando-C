@@ -4,7 +4,7 @@
 int main()
 {
     int c, empalavra = 0, np = 0;
-    // 0 = Verdadeiro e 1 = Falso
+    // 0 = Fora da palavra; 2 = Dentro da palavra
     np = 0;
     while ((c = getchar()) != EOF)
     {
