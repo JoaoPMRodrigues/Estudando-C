@@ -3,11 +3,10 @@
 /*
 Este código conta o número de palavras de uma frase e
 quantas palavras tem o tamanho i, para i > 0 e i < 10
-e cria um histograma na horizontal com o tamanho de cada palavra
 */
 int main()
 {
-    int c, i, j;
+    int c, i;
     int tamanho = 0;
     int empalavra = 0;
     int np = 0;
@@ -44,12 +43,8 @@ int main()
             tamanho = 0;
         }
     }
-    for (i = 1; i < 10; ++i)
-    {
-        printf("%2d | ", i);
-        for (j = 0; j < tamanhos[i]; ++j)
-            printf("*");
-        printf("\n");
-    }
+    for (i = 0; i < 10; ++i)
+        printf("Tamanho %d = %d palavras.\n", i, tamanhos[i]);
+    printf("Número de palavras = %d\n", np);
     return 0;
 }
