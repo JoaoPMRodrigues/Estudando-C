@@ -6,7 +6,7 @@ int main (void)
     
     int paridade_atual,paridade_nova;
 
-    int tamanhoo_bloco=1,k_informativo=0,k;
+    int tamanho_bloco=1,k_informativo=0,k;
     printf("n: ");
     scanf("%d",&n);
 
@@ -23,33 +23,33 @@ int main (void)
         paridade_nova=valor%2;
 
         if (paridade_atual==paridade_nova)
-            tamanhoo_bloco+=1;
+            tamanho_bloco+=1;
         else
         {
             if(!k_informativo)
             {
-                k=tamanhoo_bloco;
+                k=tamanho_bloco;
                 k_informativo=1;
             }
-            else if (tamanhoo_bloco!=k)
+            else if (tamanho_bloco!=k)
             {
                 printf("Não intercalado\n");
                 return 0;
             }
             
-            tamanhoo_bloco=1;
+            tamanho_bloco=1;
             paridade_atual=paridade_nova;
         }
     }
     if(k_informativo)
     {
-        if(tamanhoo_bloco!=k)
+        if(tamanho_bloco!=k)
         {
             printf("Não intercalado\n");
             return 0;
         }
     } else
-    k = tamanhoo_bloco;
+    k = tamanho_bloco;
 
     printf("É %d-intercalado\n",k);
 }
