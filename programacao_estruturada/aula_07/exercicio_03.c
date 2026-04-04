@@ -22,9 +22,6 @@ int expoente(int n)
 
 int armstrong(int n)
 {
-    if (!(n / 100))
-        return 0;
-
     int numero = n, digito, pot, soma = 0;
 
     pot = expoente(n);
@@ -36,10 +33,7 @@ int armstrong(int n)
         numero /= 10;
     }
 
-    if (soma == n)
-        return 1;
-    else
-        return 0;
+    return soma == n;
 }
 
 int main(void)
@@ -49,11 +43,11 @@ int main(void)
     printf("n: ");
     scanf("%d", &n);
 
-    int bool = armstrong(n);
+    int e_armstrong = armstrong(n);
 
-    if (bool)
-        printf("%d é um número forte.\n", n);
+    if (e_armstrong)
+        printf("%d é um número de armstrong.\n", n);
     else
-        printf("%d não é um número forte.\n", n);
+        printf("%d não é um número de armstrong.\n", n);
     return 0;
 }
