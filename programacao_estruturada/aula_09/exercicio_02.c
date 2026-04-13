@@ -9,33 +9,32 @@ int conta_granizo(int n)
     else
         return 1 + conta_granizo(3 * n + 1);
 }
-void granizo(int n)
+void granizo(int n, int original)
 {
 
     int quant;
-    int naux = 27;
 
     if (n == 1)
     {
         printf("%d\n", n);
-        quant = conta_granizo(naux);
+        quant = conta_granizo(original);
         printf("%d\n", quant);
     }
     else if (n % 2 == 0)
     {
         printf("%d ", n);
-        granizo(n / 2);
+        granizo(n / 2, original);
     }
     else
     {
         printf("%d ", n);
-        granizo(3 * n + 1);
+        granizo(3 * n + 1, original);
     }
 }
 
 int main(void)
 {
     int n = 27;
-    granizo(n);
+    granizo(n, n);
     return 0;
 }
