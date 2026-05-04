@@ -1,4 +1,4 @@
-# include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -7,14 +7,14 @@ int main()
     int i, ano = 2026;
 
     salario_atual = s_i;
-    
-    for (i=1995;i<ano;i++)
+
+    for (i = 1995; i < ano; i++)
     {
-        salario_atual += salario_atual*juros;
+        salario_atual += salario_atual * juros;
         juros *= 2;
     }
-    
-    printf("salário atual = R$%.2f\n",salario_atual);
+
+    printf("salário atual = R$%.2f\n", salario_atual);
 
     return 0;
 }

@@ -1,33 +1,31 @@
-# include <stdio.h>
+#include <stdio.h>
 
-int main (void)
+int main(void)
 {
-    int n,i,c,primo;
-    int soma=0;
+    int n, i, c, soma = 0;
+
     do
     {
         printf("Digite um número: ");
-        scanf("%d",&n);
-    } while (n<=0);
-    
+        scanf("%d", &n);
+    } while (n <= 0);
 
-
-    for(i=2;i<=n;i++)
+    for (i = 2; i <= n; i++)
     {
-        for(c=3;c<i;c++) //Verifica primo
+        for (c = 2; c < i; c++) // Verifica primo
         {
-            if(i%c==0)
+            if (i % c == 0)
                 continue;
         }
 
-        if((int)n/i==(float)n/i)
-        {    
+        if (n / i == (n * 1.0) / i)
+        {
             printf("%d ", i);
-            n/=i;
-            soma+=i;
+            n /= i;
+            soma += i;
             i--;
         }
     }
-    printf("\nSoma = %d\n",soma);
+    printf("\nSoma = %d\n", soma);
     return 0;
 }

@@ -1,50 +1,54 @@
-# include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int main (void)
+int main(void)
 {
-    int i,j,k;
-    int m,n;
+    int m, n;
 
     printf("n: ");
-    scanf("%d",&n);
+    scanf("%d", &n);
 
     printf("m: ");
-    scanf("%d",&m);
+    scanf("%d", &m);
 
-    int veta[n],vetb[m],vetc[n+m];
+    int *v1, *v2, *v3;
 
-    for(i=0;i<n;i++)
+    v1 = (int *)malloc(n * sizeof(int));
+    v2 = (int *)malloc(m * sizeof(int));
+    v3 = (int *)malloc((n + m) * sizeof(int));
+    for (int i = 0; i < n; i++)
+
     {
-        printf("veta[%d]: ",i);
-        scanf("%d",&veta[i]);
+        printf("veta[%d]: ", i);
+        scanf("%d", &v1[i]);
     }
 
-    for(i=0;i<m;i++)
+    for (int i = 0; i < m; i++)
     {
-        printf("vetb[%d]: ",i);
-        scanf("%d",&vetb[i]);
+        printf("vetb[%d]: ", i);
+        scanf("%d", &v2[i]);
     }
-    i=0;
-    j=0;
-    k=0;
-    while(i<n || j<m)
+
+    int c1 = 0, c2 = 0, c3 = 0;
+
+    while (c1 < n || c2 < m)
     {
-        if(i<=j && i<n)
+        if (c1 <= c2 && c1 < n)
         {
-            vetc[k]=veta[i];
-            i++;
-            k++;
+            v3[c3] = v1[c1];
+            c1++;
+            c3++;
         }
         else
         {
-            vetc[k]=vetb[j];
-            j++;
-            k++;
+            v3[c3] = v2[c2];
+            c2++;
+            c3++;
         }
     }
 
-    for(i=0;i<k;i++)
-        printf("%d ",vetc[i]);
+    for (int i = 0; i < (n + m); i++)
+        printf("%d ", v3[i]);
     printf("\n");
     return 0;
 }
